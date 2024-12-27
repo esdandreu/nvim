@@ -36,6 +36,12 @@ require("lazy").setup({{
 --     require("vscode-multi-cursor").addSelectionToNextFindMatch()
 -- end)
 
+-- Create a multicursor in current word and jump to next occurrence
 vim.keymap.set('n', 'gb', 'mciw*<Cmd>nohl<CR>', {
+    remap = true
+})
+
+-- Create a multicursor of current selection and select next occurrence
+vim.keymap.set('v', 'gb', 'ygvmc/\\V<C-R>"<CR>', {
     remap = true
 })
