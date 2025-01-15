@@ -30,6 +30,10 @@ require("lazy").setup({{
     event = "VeryLazy",
     cond = not not vim.g.vscode,
     opts = {}
+}, {
+    "gregorias/coerce.nvim",
+    tag = 'v4.1.0',
+    config = true
 }})
 
 -- vim.keymap.set({"n", "x", "i"}, "<C-d>", function()
